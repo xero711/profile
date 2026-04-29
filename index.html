@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XERO // PURPLE INTERFACE</title>
+  <link rel="preload" href="assets/hero-bg.jpg" as="image">
+  <link rel="preload" href="assets/pattern2/sigil.jpg" as="image">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Share+Tech+Mono&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="texture-layer"></div>
+  <div class="scanlines"></div>
+  <canvas id="particles"></canvas>
+
+  <div class="bgm-player" id="bgmPlayer" aria-label="BGM toggle">
+    <button class="bgm-toggle" id="bgmToggle" type="button">
+      <span></span><span></span><span></span><span></span><span></span>
+    </button>
+    <span class="bgm-label">BGM</span>
+  </div>
+  <audio id="bgm" loop>
+    <source src="BGM.mp3" type="audio/mpeg">
+  </audio>
+
+  <nav class="nav">
+    <a class="nav-logo glitch" href="#home" data-text="XERO">XERO</a>
+    <div class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#about">PROFILE</a>
+      <a href="#modules">MODULES</a>
+      <a href="#works">WORKS</a>
+      <a href="#connect">LINKS</a>
+    </div>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span>LIVE</span>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow reveal">[ PURPLE INTERFACE // ONLINE ]</span>
+        <h1 class="hero-title glitch reveal" data-text="XERO">XERO</h1>
+        <p class="hero-type reveal">
+          <span id="typingText"></span><span class="cursor">_</span>
+        </p>
+        <p class="hero-lead reveal">
+          AI開発やソフト制作、サーバー構築の依頼などを受け、サービスを提供しています
+        </p>
+        <div class="hero-actions reveal">
+          <a class="primary-btn" href="#modules">MODULESを見る</a>
+          <a class="ghost-btn" href="#connect">リンクへ</a>
+        </div>
+        <div class="quick-stats reveal">
+          <div><strong>18</strong><span>YEARS OLD</span></div>
+          <div><strong>TOKYO</strong><span>BASE</span></div>
+          <div><strong>AI</strong><span>FOCUS</span></div>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal" aria-hidden="true">
+        <div class="stage-orbit orbit-a"></div>
+        <div class="stage-orbit orbit-b"></div>
+        <div class="stage-orbit orbit-c"></div>
+        <div class="signal signal-1"></div>
+        <div class="signal signal-2"></div>
+        <div class="sigil-card">
+          <img src="assets/pattern2/sigil.jpg" alt="">
+          <span class="sigil-glow"></span>
+        </div>
+        <div class="asset-chip chip-ai">
+          <img src="assets/pattern2/ai.jpg" alt="">
+          <span>AI DEV</span>
+        </div>
+        <div class="asset-chip chip-bot">
+          <img src="assets/pattern2/bot.jpg" alt="">
+          <span>BOT</span>
+        </div>
+        <div class="asset-chip chip-pc">
+          <img src="assets/pattern2/pc.jpg" alt="">
+          <span>PC BUILD</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <header class="section-header reveal">
+        <span>// 01</span>
+        <h2>PROFILE</h2>
+        <i></i>
+      </header>
+      <div class="profile-grid">
+        <article class="glass-card reveal">
+          <span class="card-kicker">IDENTITY</span>
+          <h3>XERO</h3>
+          <p>
+            AI開発、Discord Bot、アプリ開発、自作PCをしている18歳のデジタルクリエイターです。
+          </p>
+          <ul class="data-list">
+            <li><span>AGE</span><b>18歳</b></li>
+            <li><span>BASE</span><b>Tokyo, JP</b></li>
+            <li><span>ROLE</span><b>Programmer</b></li>
+            <li><span>FOCUS</span><b>AI / Bot / App</b></li>
+          </ul>
+        </article>
+
+        <article class="glass-card reveal">
+          <span class="card-kicker">LIFESTYLE</span>
+          <h3>VOCATIONAL STUDENT</h3>
+          <p>
+            IT系の専門学校に通いながら、AI、プログラミング、Bot制作などをしています。
+          </p>
+          <div class="pulse-tags">
+            <span>AI</span>
+            <span>APP</span>
+            <span>BOT</span>
+            <span>PC</span>
+            <span>GAME</span>
+            <span>PROGRAMMING</span>
+          </div>
+        </article>
+
+        <article class="glass-card reveal texture-card">
+          <span class="card-kicker">SKILL SET</span>
+          <h3>BUILD MODULES</h3>
+          <p>
+            AI系の開発やAIを用いたソフト、Discord Bot制作。
+            ハードウェアは事務用PCからゲーミングPCまで、多くの自作経験があります。
+          </p>
+          <ul class="data-list">
+            <li><span>AI</span><b>開発 / 活用</b></li>
+            <li><span>BOT</span><b>Discord Bot</b></li>
+            <li><span>APP</span><b>アプリ開発</b></li>
+            <li><span>PC</span><b>自作PC</b></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider-strip reveal" aria-hidden="true"></div>
+
+    <section class="modules section" id="modules">
+      <header class="section-header reveal">
+        <span>// 02</span>
+        <h2>MODULES</h2>
+        <i></i>
+      </header>
+      <div class="module-grid">
+        <article class="module-card reveal">
+          <img src="assets/pattern2/ai.jpg" alt="AI development visual" loading="lazy">
+          <div>
+            <span>MAIN</span>
+            <h3>AI DEVELOPMENT</h3>
+            <p>AI系の開発やAIを用いたプロジェクトを進行中。</p>
+          </div>
+        </article>
+        <article class="module-card reveal">
+          <img src="assets/pattern2/bot.jpg" alt="Bot development visual" loading="lazy">
+          <div>
+            <span>BOT</span>
+            <h3>DISCORD BOTS</h3>
+            <p>管理、音楽、読み上げ、エンタメ機能を持つBotを制作。</p>
+          </div>
+        </article>
+        <article class="module-card reveal">
+          <img src="assets/pattern2/pc.jpg" alt="Custom PC visual" loading="lazy">
+          <div>
+            <span>HARDWARE</span>
+            <h3>CUSTOM PC</h3>
+            <p>事務用からゲーミングPCの自作経験があり、ハードウェアもOK</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="works section" id="works">
+      <header class="section-header reveal">
+        <span>// 03</span>
+        <h2>WORKS</h2>
+        <i></i>
+      </header>
+      <div class="works-grid">
+        <article class="work-panel reveal">
+          <span class="work-status">ACTIVE</span>
+          <h3>Discat</h3>
+          <p>管理、音楽、読み上げ、エンタメ機能を備えた多機能Discord Bot。</p>
+          <div class="work-tags"><span>管理</span><span>音楽</span><span>TTS</span><span>過疎化対策</span><span>セキュリティ</span></div>
+          <a href="https://discord.com/oauth2/authorize?client_id=1423249399936585848&permissions=4505251478502583&integration_type=0&scope=bot" target="_blank">サーバーに追加</a>
+        </article>
+        <article class="work-panel reveal">
+          <span class="work-status">ACTIVE</span>
+          <h3>Discat V2</h3>
+          <p>Discatにない機能を追加し、使いやすいよう改良。</p>
+          <div class="work-tags"><span>管理</span><span>音楽</span><span>TTS</span><span>バラエティ</span></div>
+          <a href="https://discord.com/oauth2/authorize?client_id=1421780520110526619&permissions=2252354400550327&integration_type=0&scope=bot" target="_blank">サーバーに追加</a>
+        </article>
+        <article class="work-panel pending reveal">
+          <span class="work-status">SOON</span>
+          <h3>SOFTWARE</h3>
+          <p>GitHubで公開できる制作物を準備中。公開できるものから順次追加予定。</p>
+          <div class="loading-bar"><span></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="connect section" id="connect">
+      <header class="section-header reveal">
+        <span>// 04</span>
+        <h2>LINKS</h2>
+        <i></i>
+      </header>
+      <div class="connect-grid">
+        <a class="connect-card reveal" href="https://www.tiktok.com/@00_rei7?_r=1&_t=ZS-95jBbBwwvCM" target="_blank">
+          <span>TIKTOK</span><b>@00_rei7</b><i>↗</i>
+        </a>
+        <a class="connect-card reveal" href="https://x.com/xero_c8?s=21" target="_blank">
+          <span>X</span><b>@xero_c8</b><i>↗</i>
+        </a>
+        <a class="connect-card reveal" href="https://discord.gg/Jutf9VZjaQ" target="_blank">
+          <span>DISCORD</span><b>参加する</b><i>↗</i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="glitch" data-text="XERO">XERO</span>
+    <p>© 2026 XERO // PURPLE INTERFACE</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
